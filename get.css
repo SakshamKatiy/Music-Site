@@ -1,0 +1,654 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+
+.container {
+    /* border: 1px solid red; */
+    height: 710px;
+    width: 1100px;
+    /* display: flex; */
+    justify-content: center;
+
+}
+
+.content {
+
+    background-color: rgb(1, 12, 12);
+}
+
+.box_left {
+    width: 27%;
+    height: 600px;
+    /* border: 1px solid blue; */
+    /* background-color: rgba(17, 29, 44, 0.993); */
+    box-shadow: 5px 20px 20px 25px rgba(3, 21, 37, 0.767);
+
+}
+
+.box_left h4 a {
+    color: rgb(67, 162, 185);
+}
+
+.right_box {
+    width: 73%;
+    /* border: 2px solid green; */
+    height: 600px;
+    background-color: rgb(25, 46, 71);
+    box-shadow: -5px 30px 20px 30px rgba(4, 16, 27, 0.767);
+
+}
+
+.down_box {
+    height: 15.4%;
+    /* border: 2px solid rgb(212, 21, 139); */
+    position: relative;
+    right: 12px;
+    width: 1099px;
+    background-color: rgb(18, 35, 46);
+    box-shadow: -1px 10px 20px 25px rgba(3, 21, 37, 0.767);
+
+}
+
+h4:hover {
+
+    background-color: rgba(240, 248, 255, 0.445);
+}
+
+h4 a {
+    color: rgba(241, 234, 234, 0.623);
+    text-decoration: none;
+    margin-left: 5px;
+}
+
+h4 a:hover {
+    color: rgb(8, 5, 1);
+    margin: 0px 0px 0px 20px;
+    text-decoration: none;
+
+}
+
+.left_songs {
+    height: 300px;
+    overflow: auto;
+  
+}
+
+.left_songs::-webkit-scrollbar {
+    display: none;
+}
+.left_songs {
+    -ms-overflow-style: none;
+}
+
+.left_img img {
+    width: 36px;
+    height: 36px;
+}
+
+.left_song_name a {
+    font-size: 14px;
+
+    color: rgb(3, 26, 46);
+    text-decoration: none;
+}
+
+.left_name {
+    font-size: 12px;
+    color: rgba(2, 24, 43, 0.589)
+}
+
+.left_icon a {
+    font-size: 25px;
+    margin-left: 15px;
+    color: rgb(4, 29, 51);
+}
+
+.short_text {
+    font-size: 10px;
+    color: rgba(4, 27, 48, 0.61);
+}
+
+#audio {
+    width: 500px;
+}
+
+.row {
+    background-color: aquamarine;
+}
+
+.navbar {
+    color: rgb(148, 45, 45);
+}
+
+.mainwave {
+    width: 40px;
+    height: 40px;
+    /* border: 1px solid red; */
+    position: relative;
+    top: 35px;
+    left: 20px;
+
+    margin: 2px;
+    display: flex;
+}
+
+
+.mainwave img {
+    position: relative;
+    left: 5px;
+    bottom: 13px;
+    border-radius: 50%;
+    width: 55px;
+    height: 55px;
+    box-shadow: 0.5
+    px 0.5px 5px 12px rgba(2, 16, 16, 0.567);
+    border: 1px solid black;
+}
+
+.down-line {
+    position: absolute;
+    left: 94px;
+    top: 44px;
+}
+
+.start {
+    position: relative;
+    left: 180px;
+    top: 55px;
+    color: aquamarine;
+    cursor: pointer;
+}
+
+.currentstart {
+    position: relative;
+    left: 195px;
+    top: 58px;
+    color: rgb(115, 117, 116);
+    font-size: 13px;
+}
+
+#playrange {
+    position: relative;
+    left: 195px;
+    top: 25px;
+
+
+
+}
+.progressbar_fix{
+    width:250px;
+}
+.down_box .upper_bar {
+    background-color: rgb(7, 56, 56);
+    position: relative;
+    width: 250px;
+    height: 2px;
+    right: 45px;
+    top: 68px;
+    transition: 1s linear;
+}
+
+.down_box .upper_bar_dot {
+    width: 5px;
+   
+    background-color: rgb(248, 69, 161);
+    height: 2px;
+    position: relative;
+    right: 295px;
+    top: 67.8px;
+}
+
+.down_box .upper_bar_dot::before {
+    content: "";
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    border: 1px solid rgb(100, 209, 236);
+    border-radius: 50%;
+    left: -5px;
+    top: -4px;
+    box-shadow: inset 0px 0px 3px rgba(147, 166, 168, 0.123)
+}
+
+.down_box #playrange {
+    position: relative;left: 205px;top:15px;
+    width: 250px;
+    cursor: pointer;
+    opacity: 0;
+    z-index: 99999;
+}
+
+.currentend {
+  
+    color: rgba(142, 151, 151, 0.753);
+    font-size: 13px;
+position: fixed;top: 683px;right: 670px;
+}
+
+.down_box #volrange {
+    position: relative;
+   right: 51px;
+    top: 62px;
+    opacity: 0.5;
+}
+.vol-button .bi{
+    position: relative;
+    /* left: 80px; */
+    top: 57px;
+    /* font-size: 20px; */
+}
+.vol-button .bi{
+    position: relative;
+   right: 50px;
+    top: 56px;
+  
+}
+.down_box .volume-bar{
+    width: 110px;
+    height: 2px;
+    background-color: rgba(68, 133, 136, 0.271);
+    position: relative;
+    /* left: 102px; */
+    top: 44px;
+    right: 30px;
+    cursor: pointer;
+}
+
+.upper-bar-dot{
+    border: 1px solid rgb(0, 200, 255);
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    position: relative;top: 39px;
+    right: 30px;
+    
+}
+.volumerange{
+    color: rgb(2, 255, 171);
+    /* border: 1px solid red; */
+    position: relative;top: 41.5px;
+    right: 30px;
+    
+}
+.right_box::before{
+    content: "";
+    position: absolute;left: 950px;top: 20px;
+    height: 170px;
+    width: 195px;
+    background-image: url(arjit.png);
+    opacity: 0.7;
+    /* box-shadow: 0px 4px 5px 0px black; */
+    /* box-shadow:  0px 5px 1px 0px rgb(15, 29, 56); */
+    /* z-index: -1; */
+}
+.song-head button{
+    width: 50px;
+    color: rgb(182, 187, 187);
+    background-color: rgba(17, 82, 143, 0.418);
+    border-radius: 10px;
+    border: 1px solid rgb(73, 122, 168);
+}
+.song-head button:hover{
+    width: 50px;
+    font-weight: bold;
+    color: rgb(0, 12, 12);
+    background-color: rgba(15, 248, 120, 0.685);
+    border-radius: 10px;
+}
+.popular_songs_body{
+    /* border: 2px solid rgb(89, 17, 233); */
+    overflow: auto; 
+    height: auto;
+ -ms-overflow-style: none;
+}
+.popular_songs_body::-webkit-scrollbar{
+  display: none;
+}
+.new_releases{
+  cursor: pointer;
+}
+.new_releases h6{
+    /* border: 1px solid red; */
+  
+    /* margin: 0px 10px 16px 0px; */
+ font-size: 14px;
+ color: rgb(254, 226, 189);
+}
+.new_releases .subtitle{
+font-size: 10px;
+color: rgba(245, 245, 220, 0.587);
+}
+.new_releases img{
+  height: 100px;
+  width: 100px;
+  border-radius: 10%;
+  margin: 0px 10px 16px 0px; 
+  box-shadow: 0px 2px 5px 5px rgba(17, 31, 45, 0.936);
+}
+.popular-songs-head{
+    /* border: 1px solid black; */
+    height: 30px;
+    margin-top: 20px;
+}
+
+.popular-songs-head i{
+    position: relative;left: 714px;bottom: 25px;
+    
+}
+.gallery{
+/* border: 1px solid red; */
+overflow: auto;
+-ms-overflow-style: none;
+/* margin-top: 20px; */
+}
+.gallery::-webkit-scrollbar {
+    color: aqua;
+    border: 1px solid rgb(47, 0, 0);
+}
+
+
+.gallery .gallery-name img{
+    /* border: 1px solid red; */
+   width: 100px;
+    height: 110px;
+    border-radius: 50%;
+    margin: 0px 10px 16px 0px;
+    scroll-behavior: smooth;
+    cursor: pointer;
+}
+
+i{
+    cursor: pointer;
+}
+  
+.mainwaveagain{
+    width: 1080px;
+    height:260px;
+    position: relative;
+   
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    display:flex;
+  }
+  .mainwaveagain .bar{
+    width: 1px;
+    height: 100px;
+    border-radius: 10px;
+    background: rgb(7, 86, 119);
+    animation: movement 1.5s ease-in-out infinite
+  }
+  @keyframes movement{
+  0%,100%{
+    height:2px;
+  }
+  50%{
+    height:80px;
+  }
+  }
+  .mainwaveagain .bar:nth-child(1){
+    background: rgb(24, 7, 1);
+    animation-delay: 1s;
+    
+  }
+  .mainwaveagain .bar:nth-child(2){
+    background: rgb(2, 12, 61);
+    animation-delay: .8s;
+  }
+  .mainwaveagain .bar:nth-child(3){
+    background: rgb(24, 6, 116);
+    animation-delay: .4s;
+  }
+  .mainwaveagain .bar:nth-child(4){
+    background: rgb(57, 57, 230);
+    animation-delay: .2s;
+  }
+  .mainwaveagain .bar:nth-child(5){
+    background: rgb(8, 103, 126);
+    animation-delay: .2s;
+  }
+  .mainwaveagain .bar:nth-child(6){
+    background: rgb(27, 136, 209);
+    animation-delay: .2s;
+  }
+  .mainwaveagain .bar:nth-child(7){
+    background: rgb(74, 173, 226);
+    animation-delay: .4s;
+  }
+  .mainwaveagain .bar:nth-child(8){
+    background: rgb(107, 235, 231);
+    animation-delay: .6s;
+  }
+  .mainwaveagain .bar:nth-child(9){
+    background: rgba(130, 230, 233, 0.743);
+    animation-delay: .8s;
+  }
+  .mainwaveagain .bar:nth-child(10){
+    background: rgba(90, 241, 213, 0.754);
+    animation-delay: 1s
+  }
+  .mainwaveagain .bar:nth-child(11){
+    background: rgba(4, 125, 147, 0.832);
+    animation-delay: 1s;
+    
+  }
+  .mainwaveagain .bar:nth-child(12){
+    background: rgba(2, 40, 42, 0.17);
+    animation-delay: .8s;
+  }
+  .mainwaveagain .bar:nth-child(13){
+    background: rgba(8, 149, 215, 0.492);
+    animation-delay: .4s;
+  }
+  .mainwaveagain .bar:nth-child(14){
+    background: rgba(0, 255, 221, 0.681);
+    animation-delay: .2s;
+  }
+  .mainwaveagain .bar:nth-child(15){
+    background: rgba(38, 225, 182, 0.714);
+    animation-delay: .2s;
+  }
+  .mainwaveagain .bar:nth-child(16){
+    background: rgba(245, 222, 179, 0.635);
+    animation-delay: .2s;
+  }
+  .mainwaveagain .bar:nth-child(17){
+    background: rgba(19, 186, 198, 0.646);
+    animation-delay: .4s;
+  }
+  .mainwaveagain .bar:nth-child(18){
+    background: rgba(50, 205, 200, 0.515);
+    animation-delay: .6s;
+  }
+  .mainwaveagain .bar:nth-child(19){
+    background: rgba(67, 211, 168, 0.783);
+    animation-delay: .8s;
+  }
+  .mainwaveagain .bar:nth-child(20){
+    background: rgba(102, 51, 153, 0.726);
+    animation-delay: 1s
+  }
+  
+  .mainwaveagain .bar:nth-child(21){
+    background: rgba(0, 255, 255, 0.743);
+    animation-delay: 1s;
+    
+  }
+  .mainwaveagain .bar:nth-child(22){
+    background: rgba(19, 204, 161, 0.566);
+    animation-delay: .8s;
+  }
+  .mainwaveagain .bar:nth-child(23){
+    background: rgba(15, 173, 201, 0.629);
+    animation-delay: .4s;
+  }
+  .mainwaveagain .bar:nth-child(24){
+    background: rgba(0, 225, 255, 0.507);
+    animation-delay: .2s;
+  }
+  .mainwaveagain .bar:nth-child(25){
+    background: rgba(49, 221, 181, 0.72);
+    animation-delay: .2s;
+  }
+  .mainwaveagain .bar:nth-child(26){
+    background: rgba(21, 222, 182, 0.783);
+    animation-delay: .2s;
+  }
+  .mainwaveagain .bar:nth-child(27){
+    background: rgb(6, 113, 156);
+    animation-delay: .4s;
+  }
+  .mainwaveagain .bar:nth-child(28){
+    background: rgb(4, 88, 107);
+    animation-delay: .6s;
+  }
+  .mainwaveagain .bar:nth-child(29){
+    background: rgb(6, 10, 67);
+    animation-delay: .8s;
+  }
+  .mainwaveagain .bar:nth-child(30){
+    background: rgb(1, 5, 22);
+    animation-delay: 1s
+  }
+  .mainwaveagain .bar:nth-child(31){
+    background: rgb(24, 7, 1);
+    animation-delay: 1s;
+    
+  }
+  .mainwaveagain .bar:nth-child(32){
+    background: rgb(2, 12, 61);
+    animation-delay: .8s;
+  }
+  .mainwaveagain .bar:nth-child(33){
+    background: rgb(24, 6, 116);
+    animation-delay: .4s;
+  }
+  .mainwaveagain .bar:nth-child(34){
+    background: rgb(57, 57, 230);
+    animation-delay: .2s;
+  }
+  .mainwaveagain .bar:nth-child(35){
+    background: rgb(8, 103, 126);
+    animation-delay: .2s;
+  }
+  .mainwaveagain .bar:nth-child(36){
+    background: rgb(27, 136, 209);
+    animation-delay: .2s;
+  }
+  .mainwaveagain .bar:nth-child(37){
+    background: rgb(74, 173, 226);
+    animation-delay: .4s;
+  }
+  .mainwaveagain .bar:nth-child(38){
+    background: rgb(107, 235, 231);
+    animation-delay: .6s;
+  }
+  .mainwaveagain .bar:nth-child(39){
+    background: rgba(130, 230, 233, 0.743);
+    animation-delay: .8s;
+  }
+  .mainwaveagain .bar:nth-child(40){
+    background: rgba(90, 241, 213, 0.754);
+    animation-delay: 1s
+  }
+  .mainwaveagain .bar:nth-child(41){
+    background: rgb(24, 7, 1);
+    animation-delay: 1s;
+    
+  }
+  .mainwaveagain .bar:nth-child(42){
+    background: rgb(2, 12, 61);
+    animation-delay: .8s;
+  }
+  .mainwaveagain .bar:nth-child(43){
+    background: rgb(24, 6, 116);
+    animation-delay: .4s;
+  }
+  .mainwaveagain .bar:nth-child(44){
+    background: rgb(57, 57, 230);
+    animation-delay: .2s;
+  }
+  .mainwaveagain .bar:nth-child(45){
+    background: rgb(8, 103, 126);
+    animation-delay: .2s;
+  }
+  .mainwaveagain .bar:nth-child(46){
+    background: rgb(27, 136, 209);
+    animation-delay: .2s;
+  }
+  .mainwaveagain .bar:nth-child(47){
+    background: rgb(74, 173, 226);
+    animation-delay: .4s;
+  }
+  .mainwaveagain .bar:nth-child(48){
+    background: rgb(107, 235, 231);
+    animation-delay: .6s;
+  }
+  .mainwaveagain .bar:nth-child(49){
+    background: rgba(130, 230, 233, 0.743);
+    animation-delay: .8s;
+  }
+  .mainwaveagain .bar:nth-child(50){
+    background: rgba(90, 241, 213, 0.754);
+    animation-delay: 1s
+  }
+  .mainwaveagain .bar:nth-child(51){
+    background: rgba(4, 125, 147, 0.832);
+    animation-delay: 1s;
+    
+  }
+  .mainwaveagain .bar:nth-child(52){
+    background: rgba(2, 40, 42, 0.17);
+    animation-delay: .8s;
+  }
+  .mainwaveagain .bar:nth-child(53){
+    background: rgba(8, 149, 215, 0.492);
+    animation-delay: .4s;
+  }
+  .mainwaveagain .bar:nth-child(54){
+    background: rgba(0, 255, 221, 0.681);
+    animation-delay: .2s;
+  }
+  .mainwaveagain .bar:nth-child(55){
+    background: rgba(38, 225, 182, 0.714);
+    animation-delay: .2s;
+  }
+  .mainwaveagain .bar:nth-child(56){
+    background: rgba(245, 222, 179, 0.635);
+    animation-delay: .2s;
+  }
+  .mainwaveagain .bar:nth-child(57){
+    background: rgba(19, 186, 198, 0.646);
+    animation-delay: .4s;
+  }
+  .mainwaveagain .bar:nth-child(58){
+    background: rgba(50, 205, 200, 0.515);
+    animation-delay: .6s;
+  }
+  .mainwaveagain .bar:nth-child(59){
+    background: rgba(67, 211, 168, 0.783);
+    animation-delay: .8s;
+  }
+  .mainwaveagain .bar:nth-child(60){
+    background: rgba(102, 51, 153, 0.726);
+    animation-delay: 1s
+  }
+
+
+
+  /* anime animated */
+  .anime{
+    animation: rotatePlayer 3s linear infinite;
+  }
+  @keyframes rotatePlayer{
+    from {
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+  }

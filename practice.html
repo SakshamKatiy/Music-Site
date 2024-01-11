@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+<style>  
+        img{
+            width: 50px;
+            height: 50px;
+            border: 1px solid red;
+            cursor: pointer;
+        }
+    </style>
+</head>
+    
+<body>
+<span>2</span>
+<li class="new_releases">
+<img src="" alt="" >
+<h6>this is heading
+  <div class="subtitle">subtitle</div>
+ 
+</h6>
+<i class="bi bi-play-circle-fill" id="1"></i>
+  
+</li>
+
+<span>3</span>
+<li class="new_releases">
+<img src="" alt="" >
+<h6>this is heading
+  <div class="subtitle">subtitle</div>
+</h6>
+<i class="bi bi-play-circle-fill" id="2"></i>
+
+</li>
+
+<span>1</span>
+<li class="new_releases">
+<img src="" alt="" >
+<h6>this is heading
+  <div class="subtitle">subtitle</div>
+</h6>
+<i class="bi bi-play-circle-fill" id="3"></i>
+ 
+</li>
+
+
+
+<script>
+
+const songs = [{
+    id:"1",
+    name: "barsat",
+    Down_title: "barsat",
+    Down_artist: "King",
+  //  path:"audio/ zamana.mp3",
+   poster:"images/barsat.jpg",
+   
+  },
+  {  id:"2",
+    name: "zamana",
+    Down_title: "zamana",
+    Down_artist: "Vishal,Arjit,Suk...",
+    poster:"images/zamana.jpg"
+  },
+  {  id:"3",
+    name: "Besharam Rang",
+    Down_title: "Besharam Rang",
+    Down_artist: "Shilpa Rao, Caralisa Monteiro",
+    poster: "images/Besharam Rang.jpg"}];
+
+    Array.from(document.getElementsByClassName('new_releases')).forEach((e,i) => {
+  e.getElementsByTagName('img')[0].src=songs[i].poster;
+  e.getElementsByTagName('h6')[0].innerText=songs[i]. Down_title;
+  e.getElementsByClassName('subtitle')[0].innerText=songs[i].  Down_artist;
+});
+
+let index=1;
+// leftleftplaylist
+Array.from(document.getElementsByClassName('new_releases_song')).forEach((e,i) => {
+  e.addEventListener('click',(el)=>{
+   index=el.target.id;
+    // console.log(abc);
+    music.src = `audio/${index}.mp3`;
+    Down_image.src = `images/${index}.mp3`;
+    music.play();
+  })
+})
+</script>
+</body>
+</html>
